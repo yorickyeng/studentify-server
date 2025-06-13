@@ -1,5 +1,6 @@
 package com.studentify
 
+import com.studentify.model.PostgreStudentRepository
 import io.ktor.server.application.*
 
 fun main(args: Array<String>) {
@@ -7,9 +8,12 @@ fun main(args: Array<String>) {
 }
 
 fun Application.module() {
-    configureSerialization()
     configureDatabases()
+
+    val repository = PostgreStudentRepository()
+
+    configureSerialization()
     configureSecurity()
     configureSockets()
-    configureRouting()
+    configureRouting(repository)
 }
