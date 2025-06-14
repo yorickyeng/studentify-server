@@ -7,10 +7,10 @@ ktor:
     host: 0.0.0.0
 
 jwt:
-  domain: "https://studentify.edu"
+  secret: "your_very_strong_secret_here_at_least_32_chars"
+  issuer: "studentify-server"
   audience: "studentify-app"
   realm: "Studentify API"
-  secret: "your_strong_secret_here"
 
 postgres:
   url: "jdbc:postgresql://localhost:5432/studentify"

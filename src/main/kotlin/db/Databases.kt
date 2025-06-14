@@ -1,6 +1,5 @@
-package com.studentify
+package com.studentify.db
 
-import com.studentify.db.StudentsTable
 import io.ktor.server.application.*
 import org.jetbrains.exposed.sql.Database
 import org.jetbrains.exposed.sql.SchemaUtils
