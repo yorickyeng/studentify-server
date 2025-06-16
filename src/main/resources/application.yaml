@@ -1,9 +1,11 @@
+# ngrok http --url=modern-marmot-eminently.ngrok-free.app 8081
+
 ktor:
   application:
     modules:
       - com.studentify.ApplicationKt.module
   deployment:
-    port: 8080
+    port: 8081
     host: 0.0.0.0
 
 jwt:
